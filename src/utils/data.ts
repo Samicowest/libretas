@@ -1,9 +1,9 @@
 import Venture1 from "@/assets/venture1.png";
 import Venture2 from "@/assets/venture2.png";
 import Venture3 from "@/assets/venture3.png";
-import Blog1 from "@/assets/Blog1.png";
-import Blog2 from "@/assets/Blog2.png";
-import Blog3 from "@/assets/Blog3.png";
+import Blog1 from "@/assets/blog2.png";
+import Blog2 from "@/assets/blog2.png";
+import Blog3 from "@/assets/blog3.png";
 import { BlogPost, Company } from "@/types/types";
 
 export const companiesData: Company[] = [
