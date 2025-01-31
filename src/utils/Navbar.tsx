@@ -54,28 +54,39 @@ export function Navbar() {
           <img className="object-cover w-full h-full" src={Logo} alt="logo" />
         </div>
         <div className="flex justify-between items-center gap-4">
-          {isAct("/") ? (
-            <Link
-              to="home"
-              smooth={true}
-              duration={500}
-              className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
-            >
-              Home
-            </Link>
-          ) : (
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold ${
-                  isActive ? "before:w-[60%]" : ""
-                }`
-              }
-            >
-              Home
-            </NavLink>
-          )}
+          <Link
+            to="airdrops"
+            smooth={true}
+            duration={500}
+            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
+          >
+            Airdrops
+          </Link>
 
+          <Link
+            to="research"
+            smooth={true}
+            duration={500}
+            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
+          >
+            Research
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
+          >
+            Projects
+          </Link>
+          <Link
+            to="ventures"
+            smooth={true}
+            duration={500}
+            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
+          >
+            ventures
+          </Link>
           <Link
             to="aboutus"
             smooth={true}
@@ -83,31 +94,6 @@ export function Navbar() {
             className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
           >
             About Us
-          </Link>
-
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
-          >
-            Contact
-          </Link>
-          <Link
-            to="service"
-            smooth={true}
-            duration={500}
-            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
-          >
-            Services
-          </Link>
-          <Link
-            to="faq"
-            smooth={true}
-            duration={500}
-            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
-          >
-            FAQ
           </Link>
         </div>
       </nav>
@@ -122,36 +108,45 @@ export function Navbar() {
           >
             <div className="flex flex-col">
               <Link
-                to="home"
+                to="airdrops"
+                smooth={true}
+                duration={500}
+                className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
+              >
+                Airdrops
+              </Link>
+
+              <Link
+                to="research"
+                smooth={true}
+                duration={500}
+                className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
+              >
+                Research
+              </Link>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
+              >
+                Projects
+              </Link>
+              <Link
+                to="ventures"
+                smooth={true}
+                duration={500}
+                className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
+              >
+                ventures
+              </Link>
+              <Link
+                to="aboutus"
                 smooth={true}
                 duration={500}
                 className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
               >
                 About Us
-              </Link>
-              <Link
-                to="service"
-                smooth={true}
-                duration={500}
-                className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
-              >
-                Services
-              </Link>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={500}
-                className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
-              >
-                Contact
-              </Link>
-              <Link
-                to="section3"
-                smooth={true}
-                duration={500}
-                className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
-              >
-                FAQ
               </Link>
             </div>
           </div>

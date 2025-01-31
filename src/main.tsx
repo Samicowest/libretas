@@ -5,7 +5,8 @@ import "./index.css";
 import Root from "./Root";
 import ErrorPage from "./utils/ErrorPage";
 import Home from "./pages/Home";
-
+import DashboardPage from "./pages/Ventures";
+import AboutLibetras from "@/pages/About";
 export const router = createBrowserRouter([
   {
     element: <Root />,
@@ -15,7 +16,17 @@ export const router = createBrowserRouter([
         element: <Home />,
         errorElement: <ErrorPage />,
       },
+      {
+        path: "/about",
+        element: <AboutLibetras />,
+        errorElement: <ErrorPage />,
+      },
     ],
+  },
+  {
+    path: "/ventures/:id",
+    element: <DashboardPage />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

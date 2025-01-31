@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Img1 from "@/assets/aboutus.png";
+import { NavLink } from "react-router-dom";
+
 const AboutUs: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div id="aboutus" className="bg-gray-100 w-full">
       <div className="flex flex-col md:flex-row max-w-5xl mx-auto  justify-center p-6 bg-gray-100">
@@ -33,6 +38,13 @@ const AboutUs: React.FC = () => {
               decision-making
             </li>
           </ul>
+
+          <NavLink
+            to="/about"
+            className=" py-2 px-4 rounded-md bg-primary text-md lg:text-lg cursor-pointer text-white font-bold"
+          >
+            more...
+          </NavLink>
         </div>
         <div className="md:w-1/2 p-4">
           <img
