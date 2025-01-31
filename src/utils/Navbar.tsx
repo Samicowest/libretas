@@ -2,12 +2,12 @@ import { useEffect, useRef } from "react";
 import Logo from "../assets/logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 export function Navbar() {
   const navbarRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
-  const isAct = (path: string) => location.pathname === path;
+  // const isAct = (path: string) => location.pathname === path;
 
   // const handleLogin = async () => {
   //   try {
