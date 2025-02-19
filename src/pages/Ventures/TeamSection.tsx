@@ -1,13 +1,15 @@
 import TeamMemberCard from "./TeamMemberCard";
 import { TeamMember } from "./types";
-
+import Img1 from "@/assets/person1.png"
+import Img2 from "@/assets/person2.png"
+import Img3 from "@/assets/person3.png"
 const TeamSection = () => {
   const teamMembers: TeamMember[] = [
     {
       id: 1,
       name: "John Doe",
       role: "Lead Developer",
-      image: "/api/placeholder/150/150",
+      image: Img1,
       bio: "Full-stack developer with 8 years of experience in web development.",
       email: "john.doe@venture.com",
       skills: ["React", "TypeScript", "Node.js", "AWS"],
@@ -17,7 +19,7 @@ const TeamSection = () => {
       id: 2,
       name: "Jane Smith",
       role: "UI/UX Designer",
-      image: "/api/placeholder/150/150",
+      image: Img2,
       bio: "Creative designer focused on creating intuitive user experiences.",
       email: "jane.smith@venture.com",
       skills: ["Figma", "Adobe XD", "UI Design", "Prototyping"],
@@ -27,7 +29,7 @@ const TeamSection = () => {
       id: 3,
       name: "Mike Johnson",
       role: "Product Manager",
-      image: "/api/placeholder/150/150",
+      image: Img3,
       bio: "Experienced product manager with a track record of successful launches.",
       email: "mike.johnson@venture.com",
       skills: ["Product Strategy", "Agile", "Data Analysis", "Team Leadership"],

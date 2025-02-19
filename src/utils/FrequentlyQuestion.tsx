@@ -14,39 +14,39 @@ export function FrequentlyQuestion(): JSX.Element {
       <Accordion type="single" collapsible className="max-w-5xl mx-auto">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-xl md:text-2xl font-bold">
-            How do Libetras provides Analytic support
+            How do Libertas provides Analytic support
           </AccordionTrigger>
           <AccordionContent className="text-md md:text-xl font-normal">
-            Libetras is a brand that is set with expert professional that are
+            Libertas is a brand that is set with expert professional that are
             there to create and increase the asset of a business
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
           <AccordionTrigger className="text-xl md:text-2xl font-bold">
-            Is Libetras Sustainable?
+            Is Libertas Sustainable?
           </AccordionTrigger>
           <AccordionContent className="text-md md:text-xl font-normal">
-            Libetras is a sustainable company hereby ensure that all process of
+            Libertas is a sustainable company hereby ensure that all process of
             sustainability is not hampered which can lead to the growth fo a
             company
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
           <AccordionTrigger className="text-xl md:text-2xl font-bold">
-            How do libetras go on with their Personnel development
+            How do libertas go on with their Personnel development
           </AccordionTrigger>
           <AccordionContent className="text-md md:text-xl font-normal">
-            Libetras is there by ensure and train staff to meet the requirement
+            Libertas is there by ensure and train staff to meet the requirement
             development to function more as a lucrative company, thereby to
             ensure that everything is run smoothly
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
           <AccordionTrigger className="text-xl md:text-2xl font-bold">
-            How dose libetras integrate Crypto
+            How dose libertas integrate Crypto
           </AccordionTrigger>
           <AccordionContent className="text-md md:text-xl font-normal">
-            Libetras integrate blockchain fo a smart and clear coodinatin of a
+            Libertas integrate blockchain fo a smart and clear coodinatin of a
             business thereby enabling transparency.
           </AccordionContent>
         </AccordionItem>

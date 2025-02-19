@@ -24,3 +24,9 @@ export interface BlogPost {
 export interface BlogProps {
   posts?: BlogPost[];
 }
+
+export interface HeroProps {
+  title: string;
+  desc: string;
+  img: string;
+}

@@ -12,7 +12,7 @@ const AboutUs: React.FC = () => {
         <div className="md:w-1/2 p-4">
           <h2 className="text-2xl md:text-4xl py-8 font-bold mb-4">About Us</h2>
           <p className="leading-snug">
-            At Libretas Alpha, we're driven by a passion for empowering growth,
+            At Libertas Alpha, we're driven by a passion for empowering growth,
             innovation, and excellence. Our mission is to foster an ecosystem
             that nurtures asset development, personnel growth, and cutting-edge
             innovation, all while harnessing the power of data analytics.

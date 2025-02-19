@@ -4,7 +4,11 @@ import Venture3 from "@/assets/venture3.png";
 import Blog1 from "@/assets/blog2.png";
 import Blog2 from "@/assets/blog2.png";
 import Blog3 from "@/assets/blog3.png";
-import { BlogPost, Company } from "@/types/types";
+
+import Img1 from "@/assets/hero3.png";
+import Img2 from "@/assets/hero1.png";
+import Img3 from "@/assets/hero2.png";
+import { BlogPost, Company, HeroProps } from "@/types/types";
 
 export const companiesData: Company[] = [
   {
@@ -75,5 +79,23 @@ export const defaultPosts: BlogPost[] = [
     readTime: "6 min read",
     imageUrl: Blog3,
     category: "Trends",
+  },
+];
+
+export const HeroData: HeroProps[] = [
+  {
+    title: "Congratulations you have found freedom",
+    desc: `Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers" Article 19, universal declaration of human rights`,
+    img: Img1,
+  },
+  {
+    title: "We All Deserve Assets",
+    desc: `Discover Research, platforms and communities for the development and access to Web Assets.`,
+    img: Img2,
+  },
+  {
+    title: "Spread the Word",
+    desc: `Get Involved with Libertas Alpha directly: create value, become a partner in research and develop solutions.`,
+    img: Img3,
   },
 ];
