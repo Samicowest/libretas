@@ -1,8 +1,8 @@
 import TeamMemberCard from "./TeamMemberCard";
 import { TeamMember } from "./types";
-import Img1 from "@/assets/person1.png"
-import Img2 from "@/assets/person2.png"
-import Img3 from "@/assets/person3.png"
+import Img1 from "@/assets/person1.png";
+import Img2 from "@/assets/person2.png";
+import Img3 from "@/assets/person3.png";
 const TeamSection = () => {
   const teamMembers: TeamMember[] = [
     {

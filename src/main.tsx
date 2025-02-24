@@ -7,6 +7,7 @@ import ErrorPage from "./utils/ErrorPage";
 import Home from "./pages/Home";
 import DashboardPage from "./pages/Ventures";
 import AboutLibetras from "@/pages/About";
+import TradingPlatform from "./trading/TradingPlatform";
 export const router = createBrowserRouter([
   {
     element: <Root />,
@@ -26,6 +27,11 @@ export const router = createBrowserRouter([
   {
     path: "/ventures/:id",
     element: <DashboardPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/trading",
+    element: <TradingPlatform />,
     errorElement: <ErrorPage />,
   },
 ]);
