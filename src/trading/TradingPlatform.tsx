@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Clock, FileDown, X } from "lucide-react";
 import {
   Card,
@@ -28,6 +28,31 @@ export const TradingPlatform: React.FC = () => {
   });
   const [isExpired, setIsExpired] = useState(false);
   const [timeRemaining, setTimeRemaining] = useState("02:00:00");
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const [hours, minutes, seconds] = timeRemaining.split(":").map(Number);
+      const totalSeconds = hours * 3600 + minutes * 60 + seconds - 1;
+
+      if (totalSeconds <= 0) {
+        setIsExpired(true);
+        setTimeRemaining("00:00:00");
+        clearInterval(timer);
+      } else {
+        const newHours = String(Math.floor(totalSeconds / 3600)).padStart(
+          2,
+          "0"
+        );
+        const newMinutes = String(
+          Math.floor((totalSeconds % 3600) / 60)
+        ).padStart(2, "0");
+        const newSeconds = String(totalSeconds % 60).padStart(2, "0");
+        setTimeRemaining(`${newHours}:${newMinutes}:${newSeconds}`);
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [timeRemaining]);
 
   const handleCreatePost = (
     postData: Omit<TradePost, "author" | "timestamp">
