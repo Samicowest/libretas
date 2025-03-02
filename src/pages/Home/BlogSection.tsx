@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useInView } from "react-intersection-observer";
 import { ArrowUpRight, Calendar, Clock, User } from "lucide-react";
 import { defaultPosts } from "@/utils/data";
