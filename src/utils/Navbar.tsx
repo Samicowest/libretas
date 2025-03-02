@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import Logo from "../assets/logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 
 export function Navbar() {
@@ -54,14 +55,12 @@ export function Navbar() {
           <img className="object-cover w-full h-full" src={Logo} alt="logo" />
         </div>
         <div className="flex justify-between items-center gap-4">
-          <Link
-            to="airdrops"
-            smooth={true}
-            duration={500}
-            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
+          <NavLink
+            to="/trading"
+            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%]  text-white font-bold"
           >
-            Airdrops
-          </Link>
+            Trading Platform
+          </NavLink>
 
           <Link
             to="research"

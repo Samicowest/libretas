@@ -22,7 +22,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
       {/* Sidebar */}
       <aside
         className={cn(
-          "bg-gray-800 hidden md:flex text-white w-64 flex-shrink-0 transition-all duration-300",
+          "bg-primary2 hidden md:flex text-white w-64 flex-shrink-0 transition-all duration-300",
           !isSidebarOpen && "w-0"
         )}
       >

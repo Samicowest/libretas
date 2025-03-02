@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
 import { ArrowUpRight, Calendar, Clock, User } from "lucide-react";
 import { defaultPosts } from "@/utils/data";
 import { BlogPost, BlogProps } from "@/types/types";
@@ -8,23 +9,58 @@ import { BlogPost, BlogProps } from "@/types/types";
 const postsBlog: BlogPost[] = defaultPosts;
 
 const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
+  // Use Intersection Observer to detect when the container is in view
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Trigger animation only once
+    threshold: 0.5, // Trigger when 50% of the container is visible
+  });
+
+  // Array of box data
+  const boxes = [
+    {
+      id: 1,
+      color: "bg-blue-500",
+      text: "Box 1",
+      animation: "translate-x-full",
+    }, // Slide from right
+    {
+      id: 2,
+      color: "bg-green-500",
+      text: "Box 2",
+      animation: "translate-y-full",
+    }, // Slide from bottom
+    {
+      id: 3,
+      color: "bg-purple-500",
+      text: "Box 3",
+      animation: "-translate-x-full",
+    }, // Slide from left
+  ];
+
   return (
     <section id="research" className="py-16 bg-primary2 ">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Latest Research Posts
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-lg leading-8 text-primary font-bold">
             Stay updated with our latest research and development programs
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post) => (
+        <div
+          ref={ref}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {posts.map((post, index) => (
             <article
               key={post.id}
-              className="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className={`flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl  transform transition-all duration-1000 ease-in-out ${
+                inView
+                  ? "translate-x-0 translate-y-0 opacity-100"
+                  : `${boxes[index].animation} opacity-0`
+              }`}
             >
               <div className="h-48 w-full relative">
                 <img

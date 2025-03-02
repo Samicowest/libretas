@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
       className="relative w-full h-auto  lg:h-[95vh] bg-cover pt-20 bg-center py-9"
       style={{ backgroundImage: `url(${Img1})` }}
     >
-      <div className="absolute inset-0 bg-blue-900 bg-opacity-95"></div>
+      <div className="absolute inset-0 bg-primary  bg-opacity-95"></div>
       <Swiper
         slidesPerView={1}
         pagination={{ clickable: true }}

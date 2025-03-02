@@ -32,7 +32,7 @@ export const CreatePost: React.FC<CreatePostProps> = ({ onSubmit }) => {
   };
 
   return (
-    <Card className="mb-6">
+    <Card className="my-6 max-w-3xl mx-auto">
       <CardHeader>
         <CardTitle>Create Trade Analysis</CardTitle>
       </CardHeader>

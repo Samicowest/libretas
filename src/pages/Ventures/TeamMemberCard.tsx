@@ -33,7 +33,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
       <CardContent>
         <Dialog>
           <DialogTrigger asChild>
-            <Button className="w-full">View Profile</Button>
+            <Button className="w-full bg-primary2">View Profile</Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px] z-[999999]">
             <DialogHeader>

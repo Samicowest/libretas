@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -50,6 +50,25 @@ const data: dataType[] = [
 export default function App() {
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
+  useEffect(() => {
+    if (swiperInstance && swiperInstance.params) {
+      swiperInstance.params.navigation.prevEl = prevRef.current;
+      swiperInstance.params.navigation.nextEl = nextRef.current;
+      swiperInstance.navigation.init();
+      swiperInstance.navigation.update();
+    }
+  }, [swiperInstance]);
+
+  const handleSlideChange = (swiper: any) => {
+    if (prevRef.current) {
+      prevRef.current.style.display = swiper.isBeginning ? "none" : "block";
+    }
+    if (nextRef.current) {
+      nextRef.current.style.display = swiper.isEnd ? "none" : "block";
+    }
+  };
 
   return (
     <>
@@ -84,18 +103,8 @@ export default function App() {
             prevEl: prevRef.current,
             nextEl: nextRef.current,
           }}
-          onSwiper={(swiper) => {
-            prevEl: prevRef.current;
-            nextEl: nextRef.current;
-
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
-          // navigation: {
-          //     nextEl: '.swiper-button-next',
-          //     prevEl: '.swiper-button-prev',
-          //   },
-
+          onSwiper={setSwiperInstance}
+          onSlideChange={handleSlideChange}
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
@@ -107,7 +116,7 @@ export default function App() {
                     <img
                       src={dat.img}
                       alt={dat.name}
-                      className="w-full h-full object-center object-cover"
+                      className="w-full h-full cursor-pointer object-center object-cover"
                     />
                   </div>
                   <h2 className="mt-4 text-lg font-semibold text-white">
@@ -131,6 +140,7 @@ export default function App() {
             zIndex: 999999,
             cursor: "pointer",
             transform: "translateY(-50%)",
+            display: "none", // Initially hidden
           }}
         >
           <FaArrowLeft size={24} color="#255ed8" />
