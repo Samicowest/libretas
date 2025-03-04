@@ -8,6 +8,9 @@ import Home from "./pages/Home";
 import DashboardPage from "./pages/Ventures";
 import AboutLibetras from "@/pages/About";
 import TradingPlatform from "./trading/TradingPlatform";
+import SignalValidationPage from "./libertas/signal_page/page";
+import Dashboard from "./libertas/admin_dashboard/Dashboard";
+import TradingViewData from "./TradingViewData";
 export const router = createBrowserRouter([
   {
     element: <Root />,
@@ -29,9 +32,20 @@ export const router = createBrowserRouter([
     element: <DashboardPage />,
     errorElement: <ErrorPage />,
   },
+
+  {
+    path: "/signal",
+    element: <SignalValidationPage />,
+    errorElement: <ErrorPage />,
+  },
   {
     path: "/trading",
-    element: <TradingPlatform />,
+    element: <Dashboard />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/viewTrade",
+    element: <TradingViewData />,
     errorElement: <ErrorPage />,
   },
 ]);
