@@ -7,7 +7,7 @@ import ErrorPage from "./utils/ErrorPage";
 import Home from "./pages/Home";
 import DashboardPage from "./pages/Ventures";
 import AboutLibetras from "@/pages/About";
-import TradingPlatform from "./trading/TradingPlatform";
+// import TradingPlatform from "./trading/TradingPlatform";
 import SignalValidationPage from "./libertas/signal_page/page";
 import Dashboard from "./libertas/admin_dashboard/Dashboard";
 import TradingViewData from "./TradingViewData";
