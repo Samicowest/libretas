@@ -1,19 +1,5 @@
 import { activeValidations, Signal } from "../data";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
   Collapsible,
   CollapsibleContent,
@@ -48,7 +34,7 @@ const getVoteColor = (vote: Signal["yourVote"]) => {
   return "bg-gray-100 text-gray-800 hover:bg-gray-200";
 };
 
-const getProgressColor = (status: SignalData["status"]) => {
+const getProgressColor = (status: Signal["status"]) => {
   switch (status) {
     case "Approved":
       return "bg-green-500";
