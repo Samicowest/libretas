@@ -31,7 +31,7 @@ const RecentResults = () => {
                   >
                     {signal.type.charAt(0)}
                   </div>
-                  #{signal.id}
+                  {signal.type} #{signal.id}
                 </div>
               </td>
               <td className="p-2">
@@ -50,7 +50,11 @@ const RecentResults = () => {
                 </span>
               </td>
               <td className="p-2">
-                {signal.consensusProgress}/{signal.consensusTotal}
+                {signal.consensusProgress}/{signal.consensusTotal} (
+                {Math.round(
+                  (signal.consensusProgress! / signal.consensusTotal!) * 100
+                )}
+                %)
               </td>
             </tr>
           ))}

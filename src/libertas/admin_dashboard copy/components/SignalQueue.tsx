@@ -1,24 +1,24 @@
-import { recentResults } from "../data";
+import { signalsQueue } from "../data";
 
-const RecentResults = () => {
+const SignalQueue = () => {
   return (
     <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
       <div className="flex justify-between items-center mb-6">
-        <div className="text-xl font-semibold text-[#2c3e50]">
-          Recent Results
-        </div>
+        <div className="text-xl font-semibold text-[#2c3e50]">Signal Queue</div>
         <div className="text-[#3498db] text-sm cursor-pointer">View All</div>
       </div>
       <table className="w-full">
         <thead>
           <tr>
             <th className="text-left text-sm text-[#7f8c8d] p-2">Signal</th>
+            <th className="text-left text-sm text-[#7f8c8d] p-2">Asset</th>
+            <th className="text-left text-sm text-[#7f8c8d] p-2">Submitted</th>
             <th className="text-left text-sm text-[#7f8c8d] p-2">Status</th>
-            <th className="text-left text-sm text-[#7f8c8d] p-2">Consensus</th>
+            <th className="text-left text-sm text-[#7f8c8d] p-2">Action</th>
           </tr>
         </thead>
         <tbody>
-          {recentResults.map((signal) => (
+          {signalsQueue.map((signal) => (
             <tr key={signal.id}>
               <td className="p-2">
                 <div className="flex items-center">
@@ -31,9 +31,11 @@ const RecentResults = () => {
                   >
                     {signal.type.charAt(0)}
                   </div>
-                  #{signal.id}
+                  {signal.type} #{signal.id}
                 </div>
               </td>
+              <td className="p-2">{signal.asset}</td>
+              <td className="p-2">{signal.submitted}</td>
               <td className="p-2">
                 <span
                   className={`px-3 py-1 rounded-full text-sm ${
@@ -50,7 +52,9 @@ const RecentResults = () => {
                 </span>
               </td>
               <td className="p-2">
-                {signal.consensusProgress}/{signal.consensusTotal}
+                <button className="text-[#3498db] text-sm hover:underline">
+                  Validate
+                </button>
               </td>
             </tr>
           ))}
@@ -60,4 +64,4 @@ const RecentResults = () => {
   );
 };
 
-export default RecentResults;
+export default SignalQueue;

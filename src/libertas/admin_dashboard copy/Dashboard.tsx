@@ -10,8 +10,10 @@ const Dashboard = () => {
   return (
     <>
       <HeadNavbar />
-      <div className="p-4 w-full bg-[#f5f7fa]">
+
+      <div className="p-8 w-full bg-[#f5f7fa]">
         <DashboardHeader />
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <StatCard
             title="Signals Pending Validation"
@@ -35,12 +37,12 @@ const Dashboard = () => {
             trend="-8m improvement"
           />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-6 p-2 md:p-0">
+        <div className="grid grid-cols-3 gap-6">
           <div className="col-span-2">
             <SignalQueue />
             <ActiveValidations />
           </div>
-          <div className="w-full">
+          <div className="flex space-y-2">
             <RecentResults />
             <MarketOverview />
           </div>

@@ -174,13 +174,7 @@ const ActiveValidations = () => {
         </table>
       </div>
       {/* Mobile View */}
-      <div className="md:hidden space-y-4 bg-white p-4 rounded-md">
-        <div className="flex justify-between items-center mb-6">
-          <div className="text-xl font-semibold text-[#2c3e50]">
-            Active Validations
-          </div>
-          <div className="text-[#3498db] text-sm cursor-pointer">View All</div>
-        </div>
+      <div className="md:hidden space-y-4">
         {activeValidations.map((signal) => (
           <Card key={signal.id}>
             <Collapsible
@@ -189,28 +183,44 @@ const ActiveValidations = () => {
             >
               <CardHeader className="p-4">
                 <div className="flex justify-between items-center">
-                  <div className="flex items-center justify-between first-line:  w-full">
-                    <div className=" flex justify-between  items-center text-xs text-gray-500 mt-1">
-                      <div className="flex space-x-2 ">
-                        <span>
-                          {signal.consensusProgress}/{signal.consensusTotal}{" "}
-                          Validated
-                        </span>
-                        <span>
-                          {Math.round(
+                  <div className="flex items-center">
+                    <div className="w-full bg-gray-100 rounded-full h-1.5">
+                      <div
+                        className={`h-1.5 rounded-full ${
+                          signal.status === "Approved"
+                            ? "bg-green-500"
+                            : signal.status === "Rejected"
+                            ? "bg-red-500"
+                            : "bg-blue-500"
+                        }`}
+                        style={{
+                          width: `${
                             (signal.consensusProgress! /
                               signal.consensusTotal!) *
-                              100
-                          )}
-                          %
-                        </span>
-                      </div>
+                            100
+                          }%`,
+                        }}
+                      ></div>
                     </div>
-                    <div className="flex items-center  space-x-2">
-                      <span className="text-base">
-                        {signal.type} #{signal.id}
+                    <div className="flex justify-between text-xs text-gray-500 mt-1">
+                      <span>
+                        {signal.consensusProgress}/{signal.consensusTotal}{" "}
+                        Validated
                       </span>
-                      <span>{signal.asset}</span>
+                      <span>
+                        {Math.round(
+                          (signal.consensusProgress! / signal.consensusTotal!) *
+                            100
+                        )}
+                        %
+                      </span>
+                    </div>
+
+                    <div>
+                      <CardTitle className="text-base">
+                        {signal.type} #{signal.id}
+                      </CardTitle>
+                      <CardDescription>{signal.asset}</CardDescription>
                     </div>
                   </div>
                   <CollapsibleTrigger asChild>
