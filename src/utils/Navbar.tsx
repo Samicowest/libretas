@@ -106,15 +106,12 @@ export function Navbar() {
             ref={navbarRef}
           >
             <div className="flex flex-col">
-              <Link
-                to="airdrops"
-                smooth={true}
-                duration={500}
+              <NavLink
+                to="/trading"
                 className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
               >
-                Airdrops
-              </Link>
-
+                Trading Platform
+              </NavLink>
               <Link
                 to="research"
                 smooth={true}
@@ -123,22 +120,24 @@ export function Navbar() {
               >
                 Research
               </Link>
+
               <Link
-                to="projects"
+                to="project"
                 smooth={true}
                 duration={500}
                 className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
               >
-                Projects
+                Project
               </Link>
               <Link
-                to="ventures"
+                to="venture"
                 smooth={true}
                 duration={500}
                 className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
               >
-                ventures
+                Ventures
               </Link>
+
               <Link
                 to="aboutus"
                 smooth={true}

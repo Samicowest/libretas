@@ -38,7 +38,10 @@ const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
   ];
 
   return (
-    <section id="research" className="py-16 bg-primary2 ">
+    <section
+      id="research"
+      className="py-16 bg-primary2 overflow-hidden w-[100vw] "
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
