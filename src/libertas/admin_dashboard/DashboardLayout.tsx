@@ -1,9 +1,7 @@
 import React from "react";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { SubNavbar } from "@/utils/SubNavbar";
 import { Company } from "@/types/types";
-import HeadNavbar from "../admin_dashboard copy/components/HeadNavbar";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
