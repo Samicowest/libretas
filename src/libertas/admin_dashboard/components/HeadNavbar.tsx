@@ -6,7 +6,7 @@ const HeadNavbar = () => {
       <div className="">
         <NavLink
           to="/"
-          className="text-xl overflow-hidden w-[200px] h-auto font-bold flex items-center "
+          className="text-xl overflow-hidden w-[100px] md:w-[200px] h-auto font-bold flex items-center "
         >
           <img className="object-cover w-full h-full" src={Logo} alt="logo" />
         </NavLink>

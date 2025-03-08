@@ -4,7 +4,7 @@ import { signalsQueue } from "../data";
 const SignalQueue = () => {
   return (
     <>
-      <div className="bg-white rounded-lg p-6 shadow-sm mb-6 hidden md:block">
+      <div className="bg-white rounded-lg p-4 shadow-sm mb-6 hidden md:block">
         <div className="flex justify-between items-center mb-6">
           <div className="text-xl font-semibold text-[#2c3e50]">
             Signal Queue
@@ -60,7 +60,7 @@ const SignalQueue = () => {
                 <td className="p-2">
                   <NavLink
                     to="/signal"
-                    className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before: text-blue-400 font-bold "
+                    className="text-[#3498db] text-sm hover:underline"
                   >
                     Validate
                   </NavLink>
@@ -98,9 +98,12 @@ const SignalQueue = () => {
               <div className="flex justify-between items-center p-4">
                 <span className="text-gray-400">10:24</span>
                 <span className="text-blue-400 ">
-                  <a href="#dkd" className="text-sm">
+                  <NavLink
+                    to="/signal"
+                    className="text-[#3498db] text-sm hover:underline"
+                  >
                     Validate
-                  </a>
+                  </NavLink>
                 </span>
               </div>
             </div>

@@ -104,7 +104,7 @@ export function Navbar() {
       </nav>
       <div className="fixed z-[99999] bg-primary top-0 left-0 w-full lg:hidden">
         <div className="relative justify-between items-center px-2 sm:px-8 py-3 flex">
-          <div className="overflow-hidden w-[200px] h-auto">
+          <div className="overflow-hidden w-[100px] md:w-[200px] h-auto">
             <img className="object-cover w-full h-full" src={Logo} alt="logo" />
           </div>
           <div

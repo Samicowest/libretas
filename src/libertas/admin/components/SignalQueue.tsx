@@ -69,7 +69,7 @@ const SignalQueue = () => {
         </div>
         <div className="space-y-2 flex flex-col">
           {signalsQueue.map((signal) => (
-            <div className="shadow-md rounded-md flex-col ">
+            <div key={signal.id} className="shadow-md rounded-md flex-col ">
               <div className="flex justify-between items-center p-4">
                 <div className="flex items-center">
                   <div
