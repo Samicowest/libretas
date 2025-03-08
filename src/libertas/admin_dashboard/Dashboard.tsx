@@ -34,7 +34,7 @@ const Dashboard = () => {
             trend="-8m improvement"
           />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-6 p-2 md:p-0">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-6  md:p-0">
           <div className="col-span-2">
             <SignalQueue />
           </div>

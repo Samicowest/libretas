@@ -13,15 +13,14 @@ const RecentResults = () => {
         <thead>
           <tr>
             <th className="text-left text-sm text-[#7f8c8d] p-2">Signal</th>
-            <th className="text-left text-sm text-[#7f8c8d] p-2">Status</th>
-            <th className="text-left text-sm text-[#7f8c8d] p-2">Consensus</th>
+            <th className="text-right text-sm text-[#7f8c8d] p-2">Status</th>
           </tr>
         </thead>
         <tbody>
           {recentResults.map((signal) => (
             <tr key={signal.id}>
-              <td className="p-2">
-                <div className="flex items-center">
+              <td className="p-2 w-full">
+                <div className="flex justify-start">
                   <div
                     className={`w-6 h-6 rounded-md flex items-center justify-center mr-2 ${
                       signal.type === "BUY"
@@ -34,9 +33,9 @@ const RecentResults = () => {
                   #{signal.id}
                 </div>
               </td>
-              <td className="p-2">
+              <td className="p-2 w-full flex justify-end">
                 <span
-                  className={`px-3 py-1 rounded-full text-sm ${
+                  className={`px-3 py-1 rounded-full text-sm text-right ${
                     signal.status === "Pending"
                       ? "bg-gray-100 text-gray-700"
                       : signal.status === "Validating"
@@ -48,9 +47,6 @@ const RecentResults = () => {
                 >
                   {signal.status}
                 </span>
-              </td>
-              <td className="p-2">
-                {signal.consensusProgress}/{signal.consensusTotal}
               </td>
             </tr>
           ))}
