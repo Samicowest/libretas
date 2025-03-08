@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "@/assets/logo.png";
 const HeadNavbar = () => {
   return (
-    <div className="bg-[#1a2942] text-white px-8 py-3 flex justify-between items-center shadow-md">
+    <div className="bg-primary z-[9999] fixed top-0 left-0 w-full text-white px-8 py-3 flex justify-between items-center shadow-md">
       <div className="">
         <NavLink
           to="/"
@@ -18,12 +18,6 @@ const HeadNavbar = () => {
             3
           </div>
         </div>
-        <NavLink
-          to="/signal"
-          className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before: text-white font-bold "
-        >
-          Signal
-        </NavLink>
 
         <div className="w-9 h-9 rounded-full bg-[#4a69bd] text-white flex items-center justify-center font-bold">
           JD

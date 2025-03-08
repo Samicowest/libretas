@@ -1,16 +1,13 @@
-import DashboardHeader from "./components/DashboardHeader";
 import StatCard from "./components/StatCard";
 import SignalQueue from "./components/SignalQueue";
+import ActiveValidations from "./components/ActiveValidations";
 import MarketOverview from "./components/MarketOverview";
-import HeadNavbar from "./components/HeadNavbar";
 import RecentResults from "./components/RecentResults";
 
-const Dashboard = () => {
+const AdminSignals = () => {
   return (
     <>
-      <HeadNavbar />
-      <div className="p-8 mt-15 w-full bg-[#f5f7fa]">
-        <DashboardHeader />
+      <div className="p-4 mt-20 w-full bg-[#f5f7fa]">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <StatCard
             title="Signals Pending Validation"
@@ -37,6 +34,7 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-6 p-2 md:p-0">
           <div className="col-span-2">
             <SignalQueue />
+            <ActiveValidations />
           </div>
           <div className="w-full">
             <RecentResults />
@@ -48,4 +46,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default AdminSignals;

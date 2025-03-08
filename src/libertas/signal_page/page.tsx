@@ -1,7 +1,6 @@
 // app/signal-validation/page.tsx
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from "./components/navbar";
 import Breadcrumb from "./components/breadcrumb";
@@ -12,6 +11,7 @@ import ValidationStatus from "./components/validation-status";
 import ValidationActions from "./components/validation-actions";
 import ValidationHistory from "./components/validation-history";
 import { SignalDetail, ValidatorInfo, ExternalAnalysis } from "./types";
+import { NavLink } from "react-router-dom";
 
 const SignalValidationPage = () => {
   // Mock data
@@ -89,10 +89,12 @@ const SignalValidationPage = () => {
             </span>
           </div>
           <div className="flex">
-            <Button variant="outline" className="mr-3">
-              View History
-            </Button>
-            <Button variant="outline">Back to Queue</Button>
+            <NavLink
+              to="/trading"
+              className="bg-blue-400 text-sm md:text-md text-white py-2 px-4"
+            >
+              Back To Queue
+            </NavLink>
           </div>
         </div>
 

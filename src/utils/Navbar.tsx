@@ -56,10 +56,16 @@ export function Navbar() {
         </div>
         <div className="flex justify-between items-center gap-4">
           <NavLink
+            to="/admin"
+            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
+          >
+            Admin
+          </NavLink>
+          <NavLink
             to="/trading"
             className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
           >
-            Trading Platform
+            User
           </NavLink>
 
           <Link
@@ -107,10 +113,16 @@ export function Navbar() {
           >
             <div className="flex flex-col">
               <NavLink
+                to="/admin"
+                className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
+              >
+                Admin
+              </NavLink>
+              <NavLink
                 to="/trading"
                 className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
               >
-                Trading Platform
+                User
               </NavLink>
               <Link
                 to="research"

@@ -20,21 +20,21 @@ export interface MarketItem {
 
 export const signalsQueue: Signal[] = [
   {
-    id: "4395",
+    id: "4392",
     type: "BUY",
     asset: "BTCUSD",
     submitted: "10:24 AM",
     status: "Pending",
   },
   {
-    id: "4398",
+    id: "4391",
     type: "SELL",
     asset: "EURUSD",
     submitted: "10:18 AM",
     status: "Pending",
   },
   {
-    id: "4396",
+    id: "4390",
     type: "BUY",
     asset: "AAPL",
     submitted: "09:52 AM",
@@ -42,34 +42,6 @@ export const signalsQueue: Signal[] = [
   },
   {
     id: "4389",
-    type: "SELL",
-    asset: "TSLA",
-    submitted: "09:41 AM",
-    status: "Pending",
-  },
-  {
-    id: "4312",
-    type: "BUY",
-    asset: "BTCUSD",
-    submitted: "10:24 AM",
-    status: "Pending",
-  },
-  {
-    id: "4901",
-    type: "SELL",
-    asset: "EURUSD",
-    submitted: "10:18 AM",
-    status: "Pending",
-  },
-  {
-    id: "4290",
-    type: "BUY",
-    asset: "AAPL",
-    submitted: "09:52 AM",
-    status: "Pending",
-  },
-  {
-    id: "4339",
     type: "SELL",
     asset: "TSLA",
     submitted: "09:41 AM",
@@ -189,5 +161,46 @@ export const marketOverview: MarketItem[] = [
     value: "2,156.30",
     change: "+0.58%",
     isPositive: true,
+  },
+];
+
+// Mock data for analysts
+export interface Analyst {
+  id: string;
+  name: string;
+  validationRate: number;
+  averageResponseTime: number;
+  totalSignals: number;
+  approvedSignals: number;
+  rejectedSignals: number;
+}
+
+export const mockAnalysts: Analyst[] = [
+  {
+    id: "1",
+    name: "John Doe",
+    validationRate: 92,
+    averageResponseTime: 42,
+    totalSignals: 50,
+    approvedSignals: 46,
+    rejectedSignals: 4,
+  },
+  {
+    id: "2",
+    name: "Jane Smith",
+    validationRate: 88,
+    averageResponseTime: 55,
+    totalSignals: 45,
+    approvedSignals: 40,
+    rejectedSignals: 5,
+  },
+  {
+    id: "3",
+    name: "Mike Johnson",
+    validationRate: 95,
+    averageResponseTime: 38,
+    totalSignals: 60,
+    approvedSignals: 57,
+    rejectedSignals: 3,
   },
 ];

@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { signalsQueue } from "../data";
 
 const SignalQueue = () => {
@@ -20,7 +19,6 @@ const SignalQueue = () => {
                 Submitted
               </th>
               <th className="text-left text-sm text-[#7f8c8d] p-2">Status</th>
-              <th className="text-left text-sm text-[#7f8c8d] p-2">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -44,7 +42,7 @@ const SignalQueue = () => {
                 <td className="p-2">{signal.submitted}</td>
                 <td className="p-2">
                   <span
-                    className={`px-3 py-1 rounded-full text-sm ${
+                    className={`px-3 py-1 rounded-full text-sm text-center ${
                       signal.status === "Pending"
                         ? "bg-gray-100 text-gray-700"
                         : signal.status === "Validating"
@@ -56,14 +54,6 @@ const SignalQueue = () => {
                   >
                     {signal.status}
                   </span>
-                </td>
-                <td className="p-2">
-                  <NavLink
-                    to="/signal"
-                    className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before: text-blue-400 font-bold "
-                  >
-                    Validate
-                  </NavLink>
                 </td>
               </tr>
             ))}

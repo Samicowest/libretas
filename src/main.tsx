@@ -11,7 +11,9 @@ import AboutLibetras from "@/pages/About";
 import SignalValidationPage from "./libertas/signal_page/page";
 import Dashboard from "./libertas/admin_dashboard/Dashboard";
 import TradingViewData from "./TradingViewData";
-import AdminDashboard from "./libertas/AdminDashboard";
+import AdminLayout from "./libertas/admin/AdminLayout";
+import AdminSignals from "./libertas/admin/AdminSignals";
+import AdminAnalyst from "./libertas/admin/AdminAnalyst";
 export const router = createBrowserRouter([
   {
     element: <Root />,
@@ -49,10 +51,21 @@ export const router = createBrowserRouter([
     element: <TradingViewData />,
     errorElement: <ErrorPage />,
   },
+
   {
     path: "/admin",
-    element: <AdminDashboard />,
+    element: <AdminLayout />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "",
+        element: <AdminSignals />,
+      },
+      {
+        path: "analyst",
+        element: <AdminAnalyst />,
+      },
+    ],
   },
 ]);
 
