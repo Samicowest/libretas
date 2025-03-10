@@ -14,7 +14,7 @@ const TradingViewData: React.FC = () => {
 
   useEffect(() => {
     const tradingViewLink =
-      "https://www.tradingview.com/chart/AAPL/RnuW2jBL-Jamike-I-just-tested-it/";
+      "https://www.tradingview.com/chart/USDJPY/2da1f1Sd-This-trade-will-sail-through/";
     const symbol = tradingViewLink.split("/chart/")[1].split("/")[0]; // Extracts "AAPL"
 
     const fetchStockData = async () => {

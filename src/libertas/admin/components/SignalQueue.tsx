@@ -1,4 +1,5 @@
-import { signalsQueue } from "../data";
+import { Link } from "react-router-dom";
+import { activeValidations, signalsQueue } from "../data";
 
 const SignalQueue = () => {
   return (
@@ -19,10 +20,11 @@ const SignalQueue = () => {
                 Submitted
               </th>
               <th className="text-left text-sm text-[#7f8c8d] p-2">Status</th>
+              <th className="text-left text-sm text-[#7f8c8d] p-2">Action</th>
             </tr>
           </thead>
           <tbody>
-            {signalsQueue.map((signal) => (
+            {activeValidations.map((signal) => (
               <tr key={signal.id}>
                 <td className="p-2">
                   <div className="flex items-center">
@@ -55,6 +57,14 @@ const SignalQueue = () => {
                     {signal.status}
                   </span>
                 </td>
+                <span className="text-blue-400 ">
+                  <Link
+                    to={`/signal/${signal.id}`}
+                    className="text-blue-600 hover:underline"
+                  >
+                    View
+                  </Link>
+                </span>
               </tr>
             ))}
           </tbody>

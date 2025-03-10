@@ -67,7 +67,7 @@ const AdminAnalyst: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <main className="p-4 mt-20">
+      <main className="p-4 ">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <StatCard
             title="Signals Pending Validation"

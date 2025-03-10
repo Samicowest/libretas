@@ -79,7 +79,7 @@ export const signalsQueue: Signal[] = [
 
 export const activeValidations: Signal[] = [
   {
-    id: "4388",
+    id: "4395",
     type: "SELL",
     asset: "NVDA",
     submitted: "09:30 AM",
@@ -89,7 +89,7 @@ export const activeValidations: Signal[] = [
     yourVote: "Approved",
   },
   {
-    id: "4387",
+    id: "4398",
     type: "BUY",
     asset: "AMZN",
     submitted: "09:25 AM",
@@ -99,7 +99,7 @@ export const activeValidations: Signal[] = [
     yourVote: "Approved",
   },
   {
-    id: "4386",
+    id: "4396",
     type: "BUY",
     asset: "GOLD",
     submitted: "09:20 AM",
@@ -109,7 +109,27 @@ export const activeValidations: Signal[] = [
     yourVote: "Approved",
   },
   {
-    id: "4385",
+    id: "4389",
+    type: "SELL",
+    asset: "MSFT",
+    submitted: "09:15 AM",
+    status: "Rejected",
+    consensusProgress: 4,
+    consensusTotal: 8,
+    yourVote: "Rejected",
+  },
+  {
+    id: "4312",
+    type: "BUY",
+    asset: "GOLD",
+    submitted: "09:20 AM",
+    status: "Approved",
+    consensusProgress: 8,
+    consensusTotal: 8,
+    yourVote: "Approved",
+  },
+  {
+    id: "4901",
     type: "SELL",
     asset: "MSFT",
     submitted: "09:15 AM",

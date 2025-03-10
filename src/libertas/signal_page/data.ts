@@ -4,11 +4,6 @@ export interface Signal {
   id: string;
   type: "BUY" | "SELL";
   asset: string;
-  entry?: number;
-  stopLoss?: number;
-  takeProfit?: number;
-  outcome?: number;
-  result?: "Profit" | "Loss";
   submitted: string;
   status: "Pending" | "Validating" | "Approved" | "Rejected";
   consensusProgress?: number;
@@ -25,21 +20,21 @@ export interface MarketItem {
 
 export const signalsQueue: Signal[] = [
   {
-    id: "4392",
+    id: "4395",
     type: "BUY",
     asset: "BTCUSD",
     submitted: "10:24 AM",
     status: "Pending",
   },
   {
-    id: "4391",
+    id: "4398",
     type: "SELL",
     asset: "EURUSD",
     submitted: "10:18 AM",
     status: "Pending",
   },
   {
-    id: "4390",
+    id: "4396",
     type: "BUY",
     asset: "AAPL",
     submitted: "09:52 AM",
@@ -52,6 +47,34 @@ export const signalsQueue: Signal[] = [
     submitted: "09:41 AM",
     status: "Pending",
   },
+  {
+    id: "4312",
+    type: "BUY",
+    asset: "BTCUSD",
+    submitted: "10:24 AM",
+    status: "Pending",
+  },
+  {
+    id: "4901",
+    type: "SELL",
+    asset: "EURUSD",
+    submitted: "10:18 AM",
+    status: "Pending",
+  },
+  {
+    id: "4290",
+    type: "BUY",
+    asset: "AAPL",
+    submitted: "09:52 AM",
+    status: "Pending",
+  },
+  {
+    id: "4339",
+    type: "SELL",
+    asset: "TSLA",
+    submitted: "09:41 AM",
+    status: "Pending",
+  },
 ];
 
 export const activeValidations: Signal[] = [
@@ -59,11 +82,6 @@ export const activeValidations: Signal[] = [
     id: "4395",
     type: "SELL",
     asset: "NVDA",
-    entry: 6550,
-    stopLoss: 6500,
-    takeProfit: 6600,
-    outcome: 30,
-    result: "Profit",
     submitted: "09:30 AM",
     status: "Validating",
     consensusProgress: 6,
@@ -74,11 +92,6 @@ export const activeValidations: Signal[] = [
     id: "4398",
     type: "BUY",
     asset: "AMZN",
-    entry: 6550,
-    stopLoss: 6500,
-    takeProfit: 6600,
-    outcome: 30,
-    result: "Loss",
     submitted: "09:25 AM",
     status: "Validating",
     consensusProgress: 7,
@@ -89,11 +102,6 @@ export const activeValidations: Signal[] = [
     id: "4396",
     type: "BUY",
     asset: "GOLD",
-    entry: 6550,
-    stopLoss: 6500,
-    takeProfit: 6600,
-    outcome: 30,
-    result: "Profit",
     submitted: "09:20 AM",
     status: "Approved",
     consensusProgress: 8,
@@ -104,11 +112,6 @@ export const activeValidations: Signal[] = [
     id: "4389",
     type: "SELL",
     asset: "MSFT",
-    entry: 6550,
-    stopLoss: 6500,
-    takeProfit: 6600,
-    outcome: 30,
-    result: "Profit",
     submitted: "09:15 AM",
     status: "Rejected",
     consensusProgress: 4,
@@ -119,11 +122,6 @@ export const activeValidations: Signal[] = [
     id: "4312",
     type: "SELL",
     asset: "MSFT",
-    entry: 6550,
-    stopLoss: 6500,
-    takeProfit: 6600,
-    outcome: 30,
-    result: "Profit",
     submitted: "09:15 AM",
     status: "Rejected",
     consensusProgress: 4,
@@ -134,11 +132,6 @@ export const activeValidations: Signal[] = [
     id: "4901",
     type: "SELL",
     asset: "MSFT",
-    entry: 6550,
-    stopLoss: 6500,
-    takeProfit: 6600,
-    outcome: 30,
-    result: "Profit",
     submitted: "09:15 AM",
     status: "Rejected",
     consensusProgress: 4,
@@ -216,46 +209,5 @@ export const marketOverview: MarketItem[] = [
     value: "2,156.30",
     change: "+0.58%",
     isPositive: true,
-  },
-];
-
-// Mock data for analysts
-export interface Analyst {
-  id: string;
-  name: string;
-  validationRate: number;
-  averageResponseTime: number;
-  totalSignals: number;
-  approvedSignals: number;
-  rejectedSignals: number;
-}
-
-export const mockAnalysts: Analyst[] = [
-  {
-    id: "1",
-    name: "John Doe",
-    validationRate: 92,
-    averageResponseTime: 42,
-    totalSignals: 50,
-    approvedSignals: 46,
-    rejectedSignals: 4,
-  },
-  {
-    id: "2",
-    name: "Jane Smith",
-    validationRate: 88,
-    averageResponseTime: 55,
-    totalSignals: 45,
-    approvedSignals: 40,
-    rejectedSignals: 5,
-  },
-  {
-    id: "3",
-    name: "Mike Johnson",
-    validationRate: 95,
-    averageResponseTime: 38,
-    totalSignals: 60,
-    approvedSignals: 57,
-    rejectedSignals: 3,
   },
 ];

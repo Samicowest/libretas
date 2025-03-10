@@ -7,13 +7,17 @@ import ErrorPage from "./utils/ErrorPage";
 import Home from "./pages/Home";
 import DashboardPage from "./pages/Ventures";
 import AboutLibetras from "@/pages/About";
-// import TradingPlatform from "./trading/TradingPlatform";
 import SignalValidationPage from "./libertas/signal_page/page";
 import Dashboard from "./libertas/admin_dashboard/Dashboard";
 import TradingViewData from "./TradingViewData";
 import AdminLayout from "./libertas/admin/AdminLayout";
 import AdminSignals from "./libertas/admin/AdminSignals";
 import AdminAnalyst from "./libertas/admin/AdminAnalyst";
+import SignalList from "./libertas/admin/SignalList";
+import TradingHistory from "./libertas/admin/tradingHistory";
+import CreateSignal from "./libertas/CreateSignal";
+import LoginForm from "./libertas/LoginForm";
+import RegistrationForm from "./libertas/Registration";
 export const router = createBrowserRouter([
   {
     element: <Root />,
@@ -31,13 +35,23 @@ export const router = createBrowserRouter([
     ],
   },
   {
+    path: "/login",
+    element: <LoginForm />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/register",
+    element: <RegistrationForm />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/ventures/:id",
     element: <DashboardPage />,
     errorElement: <ErrorPage />,
   },
 
   {
-    path: "/signal",
+    path: "/signal/:id",
     element: <SignalValidationPage />,
     errorElement: <ErrorPage />,
   },
@@ -49,6 +63,11 @@ export const router = createBrowserRouter([
   {
     path: "/viewTrade",
     element: <TradingViewData />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/create",
+    element: <CreateSignal />,
     errorElement: <ErrorPage />,
   },
 
@@ -64,6 +83,14 @@ export const router = createBrowserRouter([
       {
         path: "analyst",
         element: <AdminAnalyst />,
+      },
+      {
+        path: "listsignal",
+        element: <SignalList />,
+      },
+      {
+        path: "history",
+        element: <TradingHistory />,
       },
     ],
   },

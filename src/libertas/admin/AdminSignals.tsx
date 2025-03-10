@@ -7,7 +7,7 @@ import RecentResults from "./components/RecentResults";
 const AdminSignals = () => {
   return (
     <>
-      <div className="p-4 mt-20 w-full bg-[#f5f7fa]">
+      <div className="p-4  w-full bg-[#f5f7fa]">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <StatCard
             title="Signals Pending Validation"

@@ -11,14 +11,21 @@ import ValidationStatus from "./components/validation-status";
 import ValidationActions from "./components/validation-actions";
 import ValidationHistory from "./components/validation-history";
 import { SignalDetail, ValidatorInfo, ExternalAnalysis } from "./types";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import { activeValidations, Signal } from "./data";
+import { useState, useEffect } from "react";
 
 const SignalValidationPage = () => {
-  // Mock data
+  const { id } = useParams<{ id: string }>();
+
+  const [signalData, setSignalData] = useState<Signal | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  console.log(id);
   const breadcrumbItems = [
     { label: "Dashboard", active: false },
     { label: "Signal Queue", active: false },
-    { label: "BUY Signal #4392", active: true },
+    { label: `${signalData?.type} - ${signalData?.asset}`, active: true },
   ];
 
   const signalDetails: SignalDetail[] = [
@@ -75,6 +82,28 @@ const SignalValidationPage = () => {
     },
   ];
 
+  useEffect(() => {
+    // Simulate fetching data from an API
+    const fetchPost = async () => {
+      setLoading(true);
+      try {
+        const sign = activeValidations.find(
+          (validation) => validation.id === id
+        );
+        setSignalData(sign || null);
+      } catch (error) {
+        console.error("Error fetching post:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPost();
+  }, [id]);
+
+  if (loading) return <p className="text-center">Loading...</p>;
+  if (!signalData) return <p className="text-center">Post not found</p>;
+
   return (
     <div className="flex flex-col min-h-screen bg-[#f5f7fa] text-[#333]">
       <Navbar />
@@ -85,7 +114,7 @@ const SignalValidationPage = () => {
           <div className="text-2xl font-semibold text-[#2c3e50] flex items-center">
             Signal Validation
             <span className="ml-4 py-1 px-3 rounded bg-[#e8f5e9] text-[#388e3c] text-base font-semibold">
-              BUY #4392
+              {signalData.id} - {signalData.asset}
             </span>
           </div>
           <div className="flex">

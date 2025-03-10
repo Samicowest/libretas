@@ -1,10 +1,10 @@
-import { Link, NavLink } from "react-router-dom";
-import { signalsQueue } from "../data";
+import { Link } from "react-router-dom";
+import { activeValidations } from "./data";
 
-const SignalQueue = () => {
+const SignalList = () => {
   return (
     <>
-      <div className="bg-white rounded-lg p-4 shadow-sm mb-6 hidden md:block">
+      <div className="bg-white rounded-lg p-6 shadow-sm mb-6 hidden md:block">
         <div className="flex justify-between items-center mb-6">
           <div className="text-xl font-semibold text-[#2c3e50]">
             Signal Queue
@@ -20,12 +20,12 @@ const SignalQueue = () => {
                 Submitted
               </th>
               <th className="text-left text-sm text-[#7f8c8d] p-2">Status</th>
-              <th className="text-left text-sm text-[#7f8c8d] p-2">Action</th>
+              <th className="text-left text-sm text-[#7f8c8d] p-2">Activate</th>
             </tr>
           </thead>
           <tbody>
-            {signalsQueue.map((signal) => (
-              <tr key={signal.id}>
+            {activeValidations.map((signal) => (
+              <tr key={signal.id} className="hover:bg-slate-100 cursor-pointer">
                 <td className="p-2">
                   <div className="flex items-center">
                     <div
@@ -44,7 +44,7 @@ const SignalQueue = () => {
                 <td className="p-2">{signal.submitted}</td>
                 <td className="p-2">
                   <span
-                    className={`px-3 py-1 rounded-full text-sm ${
+                    className={`px-3 py-1 rounded-full text-sm text-center ${
                       signal.status === "Pending"
                         ? "bg-gray-100 text-gray-700"
                         : signal.status === "Validating"
@@ -78,8 +78,11 @@ const SignalQueue = () => {
           <div className="text-[#3498db] text-sm cursor-pointer">View All</div>
         </div>
         <div className="space-y-2 flex flex-col">
-          {signalsQueue.map((signal) => (
-            <div className="shadow-md rounded-md flex-col ">
+          {activeValidations.map((signal) => (
+            <div
+              key={signal.id}
+              className="shadow-md rounded-md flex-col hover:bg-slate-100 cursor-pointer"
+            >
               <div className="flex justify-between items-center p-4">
                 <div className="flex items-center">
                   <div
@@ -98,12 +101,12 @@ const SignalQueue = () => {
               <div className="flex justify-between items-center p-4">
                 <span className="text-gray-400">10:24</span>
                 <span className="text-blue-400 ">
-                  <NavLink
-                    to="/signal"
-                    className="text-[#3498db] text-sm hover:underline"
+                  <Link
+                    to={`/signal/${signal.id}`}
+                    className="text-blue-600 hover:underline"
                   >
-                    Validate
-                  </NavLink>
+                    View
+                  </Link>
                 </span>
               </div>
             </div>
@@ -114,4 +117,4 @@ const SignalQueue = () => {
   );
 };
 
-export default SignalQueue;
+export default SignalList;

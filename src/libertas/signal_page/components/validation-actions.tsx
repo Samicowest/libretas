@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import ImageUploadButton from "./ImageUploadButton";
 
 const ValidationActions = () => {
   return (
@@ -18,6 +19,7 @@ const ValidationActions = () => {
         <label htmlFor="comment" className="font-medium block mb-2">
           Your Reasoning (Required)
         </label>
+        <ImageUploadButton />
         <Textarea
           id="comment"
           placeholder="Provide your analysis and reasoning for your decision..."
