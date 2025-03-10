@@ -17,7 +17,7 @@ import SignalList from "./libertas/admin/SignalList";
 import CreateSignal from "./libertas/CreateSignal";
 import LoginForm from "./libertas/LoginForm";
 import RegistrationForm from "./libertas/Registration";
-import TradingHistory from "./libertas/admin/tradingHistory";
+import TradingHistory from "./libertas/admin/TradingHistory";
 export const router = createBrowserRouter([
   {
     element: <Root />,
