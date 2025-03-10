@@ -14,10 +14,10 @@ import AdminLayout from "./libertas/admin/AdminLayout";
 import AdminSignals from "./libertas/admin/AdminSignals";
 import AdminAnalyst from "./libertas/admin/AdminAnalyst";
 import SignalList from "./libertas/admin/SignalList";
-import TradingHistory from "./libertas/admin/tradingHistory";
 import CreateSignal from "./libertas/CreateSignal";
 import LoginForm from "./libertas/LoginForm";
 import RegistrationForm from "./libertas/Registration";
+import TradingHistory from "./libertas/admin/tradingHistory";
 export const router = createBrowserRouter([
   {
     element: <Root />,
