@@ -18,6 +18,7 @@ import CreateSignal from "./libertas/CreateSignal";
 import LoginForm from "./libertas/LoginForm";
 import RegistrationForm from "./libertas/Registration";
 import TradingHistory from "./libertas/admin/TradingHistory";
+import ProjectFormOrig from "./pages/Ventures/venture_form/ProjectFormOrig";
 export const router = createBrowserRouter([
   {
     element: <Root />,
@@ -49,7 +50,11 @@ export const router = createBrowserRouter([
     element: <DashboardPage />,
     errorElement: <ErrorPage />,
   },
-
+  {
+    path: "/createventure/:id",
+    element: <ProjectFormOrig />,
+    errorElement: <ErrorPage />,
+  },
   {
     path: "/signal/:id",
     element: <SignalValidationPage />,
@@ -70,7 +75,6 @@ export const router = createBrowserRouter([
     element: <CreateSignal />,
     errorElement: <ErrorPage />,
   },
-
   {
     path: "/admin",
     element: <AdminLayout />,
@@ -94,8 +98,12 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  // Catch-all route for unmatched paths
+  {
+    path: "*",
+    element: <ErrorPage />, // Render the ErrorPage for unmatched routes
+  },
 ]);
-
 const rootElement = document.getElementById("root");
 if (!rootElement) {
   throw new Error("Root element not found");

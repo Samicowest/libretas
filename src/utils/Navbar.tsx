@@ -50,7 +50,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="hidden fixed z-[99999] bg-primary top-0 left-0 w-full lg:flex justify-between items-center px-16 py-3">
+      <nav className="hidden fixed z-[99999] shadow-gray-50  shadow-bottom-md bg-primary top-0 left-0 w-full lg:flex justify-between items-center px-16 py-3">
         <div className="overflow-hidden w-[200px] h-auto">
           <img className="object-cover w-full h-full" src={Logo} alt="logo" />
         </div>

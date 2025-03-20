@@ -5,7 +5,7 @@ import Blog1 from "@/assets/blog2.png";
 import Blog2 from "@/assets/blog2.png";
 import Blog3 from "@/assets/blog3.png";
 
-import Img1 from "@/assets/hero3.png";
+import Img1 from "@/assets/hero3.jpg";
 import Img2 from "@/assets/hero1.png";
 import Img3 from "@/assets/hero2.png";
 import { BlogPost, Company, HeroProps } from "@/types/types";

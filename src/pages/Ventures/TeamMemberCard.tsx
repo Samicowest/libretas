@@ -16,7 +16,7 @@ interface TeamMemberCardProps {
 
 const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
   return (
-    <Card className="h-full">
+    <Card className="h-full ">
       <CardHeader>
         <div className="flex items-center space-x-4">
           <img

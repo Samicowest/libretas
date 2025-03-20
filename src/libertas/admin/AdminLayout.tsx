@@ -36,7 +36,7 @@ const AdminLayout = () => {
         {!isSidebarOpen && (
           <button
             onClick={toggleSidebar}
-            className="fixed left-4 top-3 p-2 z-[99999] bg-primary2 text-white rounded-full hover:bg-gray-700"
+            className="fixed left-4 top-3 p-2 z-[99999]  text-white rounded-full hover:bg-gray-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

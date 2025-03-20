@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RegHeader from "./RegHeader";
 
 const LoginForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,7 @@ const LoginForm: React.FC = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <RegHeader />
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded-lg shadow-md w-full max-w-md"

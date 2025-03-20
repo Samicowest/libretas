@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RegHeader from "./RegHeader";
 
 const TradingSignalForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -42,6 +43,7 @@ const TradingSignalForm: React.FC = () => {
 
   return (
     <div className="min-h-screen py-4 bg-gray-100 flex items-center justify-center p-4">
+      <RegHeader />
       <form
         onSubmit={handleSubmit}
         className="bg-white shadow-lg rounded-lg p-8 max-w-4xl w-full space-y-6"
