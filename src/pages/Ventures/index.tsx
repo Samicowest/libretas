@@ -4,8 +4,7 @@ import TeamSection from "./TeamSection";
 // import Section from "./Section";
 // import Products from "./Products";
 import { useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
-import { companiesData } from "@/utils/data";
+import { useLocation } from "react-router-dom";
 
 const DashboardPage = () => {
   const { pathname } = useLocation();
