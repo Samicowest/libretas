@@ -1,7 +1,6 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Img1 from "../../assets/hero-background.png";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -15,7 +14,6 @@ const Hero: React.FC = () => {
     <div
       id="home"
       className="relative w-full h-auto  lg:h-[95vh] bg-cover pt-14 bg-center py-4"
-      style={{ backgroundImage: `url(${Img1})` }}
     >
       <div className="absolute inset-0 bg-primary  bg-opacity-95"></div>
       <Swiper

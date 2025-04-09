@@ -16,9 +16,7 @@ const ProjectFormOrig = React.lazy(
 const SignalValidationPage = React.lazy(
   () => import("./libertas/signal_page/page")
 );
-const Dashboard = React.lazy(
-  () => import("./libertas/admin_dashboard/Dashboard")
-);
+const Dashboard = React.lazy(() => import("./libertas/user/Dashboard"));
 const TradingViewData = React.lazy(() => import("./TradingViewData"));
 const CreateSignal = React.lazy(() => import("./libertas/CreateSignal"));
 const AdminLayout = React.lazy(() => import("./libertas/admin/AdminLayout"));

@@ -71,12 +71,18 @@ const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
                   alt={post.title}
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {post.category}
-                </span>
               </div>
 
-              <div className="flex-1 p-6">
+              <div className="flex-1 p-4 ">
+                <div className="flex w-full flex-wrap gap-1  ">
+                  {post.category.map((data) => {
+                    return (
+                      <span className=" bg-slate-400 text-white px-2 py-1 m-1 rounded-full text-xs font-medium">
+                        {data}
+                      </span>
+                    );
+                  })}
+                </div>
                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
@@ -125,12 +131,18 @@ const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
                   alt={post.title}
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {post.category}
-                </span>
               </div>
 
-              <div className="flex-1 p-6">
+              <div className="flex-1 p-4 ">
+                <div className="flex w-full gap-1  ">
+                  {post.category.map((data) => {
+                    return (
+                      <span className=" bg-slate-400 text-white px-2 py-1 m-1 rounded-full text-xs font-medium">
+                        {data}
+                      </span>
+                    );
+                  })}
+                </div>
                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
@@ -155,7 +167,7 @@ const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
 
                   <div className="border-t pt-4">
                     <a
-                      href="#"
+                      href={post.link}
                       className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-200"
                     >
                       <span className="font-medium">Read more</span>

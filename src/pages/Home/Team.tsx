@@ -17,9 +17,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import Zyre from "@/assets/team/zyre.jpeg";
 import Samson from "@/assets/team/samson.jpeg";
-import Chikezie from "@/assets/team/chikezie.jpeg";
 import Nduka from "@/assets/team/nduka.jpg";
-import Peter from "@/assets/team/peter.jpeg";
 import Nwachukwu from "@/assets/team/nwachukwu.jpg";
 import Anozie from "@/assets/team/anozie.jpg";
 
@@ -32,12 +30,7 @@ interface dataType {
 const data: dataType[] = [
   { img: Zyre, name: "Zyre", title: "Product Manager" },
   { img: Samson, name: "Ewuru Samson Uzoma", title: "Lead Web Developer" },
-  { img: Chikezie, name: "Chikezie Stanley Nnaemeka", title: "Asset Analyst" },
-  {
-    img: Peter,
-    name: "Ofoegbu Peter Agunanna",
-    title: "Community trading Educator",
-  },
+
   { img: Anozie, name: "Anozie Joel", title: "Chief Technology" },
   {
     img: Nwachukwu,

@@ -1,9 +1,10 @@
 import Venture1 from "@/assets/venture1.png";
 import Venture2 from "@/assets/venture2.png";
 import Venture3 from "@/assets/venture3.png";
-import Blog1 from "@/assets/blog2.png";
-import Blog2 from "@/assets/blog2.png";
-import Blog3 from "@/assets/blog3.png";
+
+import Blog1 from "@/assets/blog1_orig.png";
+import Blog2 from "@/assets/blog2_orig.png";
+import Blog3 from "@/assets/blog3_orig.png";
 
 import Img1 from "@/assets/hero3.jpg";
 import Img2 from "@/assets/hero1.png";
@@ -13,72 +14,78 @@ import { BlogPost, Company, HeroProps } from "@/types/types";
 export const companiesData: Company[] = [
   {
     id: "1",
-    name: "Tech Innovators",
+    name: "Micro Ventures Initiative Systems development",
     industry: "Technology",
     companyId: "283h9hf",
     description:
-      "Leading provider of innovative software solutions for enterprise businesses.",
+      "Specialists in Micro Systems for social impact and sustainable revenue through Tokenization.",
     employeeCount: 5,
-    location: "San Francisco, CA",
+    location: "Imo State, Nigeria",
     imageUrl: Venture1,
+    link: "https://medium.com/@libertasalpha_10290/blockchain-technology-in-agricultural-real-estate-a-framework-for-enhanced-liquidity-and-089b6cd04029",
   },
   {
     id: "2",
-    name: "Green Energy Co",
-    industry: "Renewable Energy",
+    name: "Libertas Estate Agriculture X Blockchain",
+    industry: "Real Estate",
     companyId: "143h9hf",
     description:
-      "Pioneering sustainable energy solutions for a greener future.",
+      "Tokenizing Agricultural Real-estate for borderless investment and capital liberation without Land ownership complexities",
     employeeCount: 8,
-    location: "Austin, TX",
+    location: "Imo State, Nigeria",
     imageUrl: Venture3,
+    link: "https://medium.com/@libertasalpha_10290/introducing-micro-venture-initiative-mvi-tokenizing-sustainable-social-impact-72f9b67069bd",
   },
   {
     id: "3",
-    name: "Health Plus",
-    industry: "Healthcare",
+    name: "Tradex Decentralized Automation",
+    industry: "Trading",
     companyId: "133h9ff",
     description:
-      "Revolutionary healthcare technology improving patient care worldwide.",
+      "Decentralized signal execution consensus for analysts and Libertas Alpha partners: bridging Liquidity and expertise.",
     employeeCount: 10,
-    location: "Boston, MA",
+    location: "Imo State, Nigeria",
     imageUrl: Venture2,
+    link: "https://medium.com/@libertasalpha_10290/building-the-future-inside-libertas-alphas-vision-driven-ecosystem-ca0d5dbe3b6c",
   },
 ];
 
 export const defaultPosts: BlogPost[] = [
   {
     id: 1,
-    title: "Getting Started with React and TypeScript",
+    title: "The future inside Libertas Alpha",
     excerpt:
-      "Learn how to set up and use TypeScript with React for better development experience.",
-    author: "Jane Cooper",
+      "Understand the direction of our tech NGO and how you can participate now and in the future",
+    author: "Chinedu Jamike",
     date: "Jan 31, 2025",
     readTime: "5 min read",
     imageUrl: Blog1,
-    category: "Development",
+    category: ["Agriculture", "Technology", "Blockchain", "Investment"],
+    link: "https://medium.com/@libertasalpha_10290/building-the-future-inside-libertas-alphas-vision-driven-ecosystem-ca0d5dbe3b6c",
   },
   {
     id: 2,
-    title: "Mastering Tailwind CSS",
+    title: "Introducing Micro venture Initiative",
     excerpt:
-      "Discover advanced techniques and best practices for using Tailwind CSS in your projects.",
-    author: "John Smith",
+      "Understand tokenization, a new frontier in community investment from Libertas Alpha.",
+    author: "Chinedu Jamike",
     date: "Jan 30, 2025",
     readTime: "8 min read",
     imageUrl: Blog2,
-    category: "Design",
+    category: ["Blockchain", "Research", "Innovation", "Tech", "Ngo"],
+    link: "https://medium.com/@libertasalpha_10290/introducing-micro-venture-initiative-mvi-tokenizing-sustainable-social-impact-72f9b67069bd",
   },
   {
     id: 3,
-    title: "Modern Web Development Trends",
+    title: "The future inside Libertas alpha",
     excerpt:
-      "Explore the latest trends and technologies shaping the future of web development.",
-    author: "Alice Johnson",
-    date: "Jan 29, 2025",
-    readTime: "6 min read",
+      "Understand the direction of our tech NGO and how you can participate now and in the future.",
+    author: "Chinedu Jamike",
+    date: "Jan 30, 2025",
+    readTime: "8 min read",
     imageUrl: Blog3,
-    category: "Trends",
+    category: ["Invest", "Tokenization", "Venture Capital", "Blockchain"],
+    link: "https://medium.com/@libertasalpha_10290/blockchain-technology-in-agricultural-real-estate-a-framework-for-enhanced-liquidity-and-089b6cd04029",
   },
 ];
 

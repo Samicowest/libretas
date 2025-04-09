@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -60,12 +59,12 @@ const VentureSection = () => {
               </CardContent>
 
               <CardFooter className="pt-4">
-                <Link to={`/ventures/${company.companyId}`} className="w-full">
+                <a href="#" className="w-full">
                   <Button className="w-full flex items-center justify-center gap-2">
                     View Details
                     <ArrowRight className="h-4 w-4" />
                   </Button>
-                </Link>
+                </a>
               </CardFooter>
             </Card>
           ))}

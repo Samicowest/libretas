@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { activeValidations } from "./data";
+import { activeValidations } from "../../data/adminData";
 
 const SignalList = () => {
   return (

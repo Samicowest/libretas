@@ -1,4 +1,4 @@
-import { activeValidations, Signal } from "./data";
+import { activeValidations, Signal } from "../../data/adminData";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
   Collapsible,

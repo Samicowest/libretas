@@ -8,8 +8,8 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import StatCard from "./components/StatCard";
-import { Analyst, mockAnalysts } from "./data";
+import StatCard from "@/components/AdminComponent/StatCard";
+import { Analyst, mockAnalysts } from "../../data/adminData";
 
 const AdminAnalyst: React.FC = () => {
   const [selectedAnalyst, setSelectedAnalyst] = useState<Analyst | null>(null);

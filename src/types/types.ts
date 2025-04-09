@@ -7,6 +7,7 @@ export interface Company {
   employeeCount: number;
   location: string;
   imageUrl: string;
+  link: string;
 }
 
 // TypeScript interfaces
@@ -18,7 +19,8 @@ export interface BlogPost {
   date: string;
   readTime: string;
   imageUrl: string;
-  category: string;
+  category: string[];
+  link: string;
 }
 
 export interface BlogProps {

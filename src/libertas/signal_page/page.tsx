@@ -2,17 +2,21 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Navbar from "./components/navbar";
-import Breadcrumb from "./components/breadcrumb";
-import SignalDetails from "./components/signal-details";
-import ChartPlaceholder from "./components/chart-placeholder";
-import AnalysisSection from "./components/analysis-section";
-import ValidationStatus from "./components/validation-status";
-import ValidationActions from "./components/validation-actions";
-import ValidationHistory from "./components/validation-history";
-import { SignalDetail, ValidatorInfo, ExternalAnalysis } from "./types";
+import Navbar from "@/components/SignalComponent/navbar";
+import Breadcrumb from "@/components/SignalComponent/breadcrumb";
+import SignalDetails from "@/components/SignalComponent/signal-details";
+import ChartPlaceholder from "@/components/SignalComponent/chart-placeholder";
+import AnalysisSection from "@/components/SignalComponent/analysis-section";
+import ValidationStatus from "@/components/SignalComponent/validation-status";
+import ValidationActions from "@/components/SignalComponent/validation-actions";
+import ValidationHistory from "@/components/SignalComponent/validation-history";
+import {
+  SignalDetail,
+  ValidatorInfo,
+  ExternalAnalysis,
+} from "../../types/signalTypes";
 import { NavLink, useParams } from "react-router-dom";
-import { activeValidations, Signal } from "./data";
+import { activeValidations, Signal } from "../../data/signalData";
 import { useState, useEffect } from "react";
 
 const SignalValidationPage = () => {

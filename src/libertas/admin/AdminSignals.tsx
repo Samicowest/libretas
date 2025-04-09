@@ -1,8 +1,8 @@
-import StatCard from "./components/StatCard";
-import SignalQueue from "./components/SignalQueue";
-import ActiveValidations from "./components/ActiveValidations";
-import MarketOverview from "./components/MarketOverview";
-import RecentResults from "./components/RecentResults";
+import StatCard from "@/components/AdminComponent/StatCard";
+import SignalQueue from "@/components/AdminComponent/SignalQueue";
+import ActiveValidations from "@/components/AdminComponent/ActiveValidations";
+import MarketOverview from "@/components/AdminComponent/MarketOverview";
+import RecentResults from "@/components/AdminComponent/RecentResults";
 
 const AdminSignals = () => {
   return (

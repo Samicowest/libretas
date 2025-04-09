@@ -1,6 +1,6 @@
-import HeadNavbar from "./components/HeadNavbar";
+import HeadNavbar from "@/components/AdminComponent/HeadNavbar";
 import { Outlet } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "@/components/AdminComponent/Sidebar";
 import { useEffect, useRef, useState } from "react";
 
 const AdminLayout = () => {
