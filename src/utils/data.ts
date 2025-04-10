@@ -22,7 +22,7 @@ export const companiesData: Company[] = [
     employeeCount: 5,
     location: "Imo State, Nigeria",
     imageUrl: Venture1,
-    link: "https://medium.com/@libertasalpha_10290/blockchain-technology-in-agricultural-real-estate-a-framework-for-enhanced-liquidity-and-089b6cd04029",
+    link: "https://medium.com/@libertasalpha_10290/introducing-micro-venture-initiative-mvi-tokenizing-sustainable-social-impact-72f9b67069bd",
   },
   {
     id: "2",
@@ -33,8 +33,8 @@ export const companiesData: Company[] = [
       "Tokenizing Agricultural Real-estate for borderless investment and capital liberation without Land ownership complexities",
     employeeCount: 8,
     location: "Imo State, Nigeria",
-    imageUrl: Venture3,
-    link: "https://medium.com/@libertasalpha_10290/introducing-micro-venture-initiative-mvi-tokenizing-sustainable-social-impact-72f9b67069bd",
+    imageUrl: Venture2,
+    link: "https://medium.com/@libertasalpha_10290/blockchain-technology-in-agricultural-real-estate-a-framework-for-enhanced-liquidity-and-089b6cd04029",
   },
   {
     id: "3",
@@ -45,7 +45,7 @@ export const companiesData: Company[] = [
       "Decentralized signal execution consensus for analysts and Libertas Alpha partners: bridging Liquidity and expertise.",
     employeeCount: 10,
     location: "Imo State, Nigeria",
-    imageUrl: Venture2,
+    imageUrl: Venture3,
     link: "https://medium.com/@libertasalpha_10290/building-the-future-inside-libertas-alphas-vision-driven-ecosystem-ca0d5dbe3b6c",
   },
 ];
@@ -60,32 +60,32 @@ export const defaultPosts: BlogPost[] = [
     date: "Jan 31, 2025",
     readTime: "5 min read",
     imageUrl: Blog1,
-    category: ["Agriculture", "Technology", "Blockchain", "Investment"],
-    link: "https://medium.com/@libertasalpha_10290/building-the-future-inside-libertas-alphas-vision-driven-ecosystem-ca0d5dbe3b6c",
-  },
-  {
-    id: 2,
-    title: "Introducing Micro venture Initiative",
-    excerpt:
-      "Understand tokenization, a new frontier in community investment from Libertas Alpha.",
-    author: "Chinedu Jamike",
-    date: "Jan 30, 2025",
-    readTime: "8 min read",
-    imageUrl: Blog2,
     category: ["Blockchain", "Research", "Innovation", "Tech", "Ngo"],
     link: "https://medium.com/@libertasalpha_10290/introducing-micro-venture-initiative-mvi-tokenizing-sustainable-social-impact-72f9b67069bd",
   },
   {
-    id: 3,
-    title: "The future inside Libertas alpha",
+    id: 2,
+    title: "Blockchain X Agriculture",
     excerpt:
-      "Understand the direction of our tech NGO and how you can participate now and in the future.",
+      "Understand the need and framework for enhanced liquidity and inclusivity.",
+    author: "Chinedu Jamike",
+    date: "Jan 30, 2025",
+    readTime: "8 min read",
+    imageUrl: Blog2,
+    category: ["Agriculture", "Technology", "Blockchain", "Investment"],
+    link: "https://medium.com/@libertasalpha_10290/blockchain-technology-in-agricultural-real-estate-a-framework-for-enhanced-liquidity-and-089b6cd04029",
+  },
+  {
+    id: 3,
+    title: "Introducing Microventure Initiative",
+    excerpt:
+      "Understand tokenizatin, a new frontier in community investment from Libertas Alpha",
     author: "Chinedu Jamike",
     date: "Jan 30, 2025",
     readTime: "8 min read",
     imageUrl: Blog3,
     category: ["Invest", "Tokenization", "Venture Capital", "Blockchain"],
-    link: "https://medium.com/@libertasalpha_10290/blockchain-technology-in-agricultural-real-estate-a-framework-for-enhanced-liquidity-and-089b6cd04029",
+    link: "https://medium.com/@libertasalpha_10290/building-the-future-inside-libertas-alphas-vision-driven-ecosystem-ca0d5dbe3b6c",
   },
 ];
 

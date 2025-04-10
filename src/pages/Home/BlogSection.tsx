@@ -4,8 +4,6 @@ import { ArrowUpRight, Calendar, Clock, User } from "lucide-react";
 import { defaultPosts } from "@/utils/data";
 import { BlogPost, BlogProps } from "@/types/types";
 
-// TypeScript interfaces
-
 const postsBlog: BlogPost[] = defaultPosts;
 
 const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
@@ -77,7 +75,7 @@ const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
                 <div className="flex w-full flex-wrap gap-1  ">
                   {post.category.map((data) => {
                     return (
-                      <span className=" bg-slate-400 text-white px-2 py-1 m-1 rounded-full text-xs font-medium">
+                      <span className=" bg-slate-400 text-white px-2 py-1 m-1 rounded-full text-[8px] font-medium">
                         {data}
                       </span>
                     );
@@ -94,10 +92,10 @@ const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-md font-semibold text-gray-900 mb-2">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                <p className="text-sm text-gray-600 mb-4">{post.excerpt}</p>
 
                 <div className="mt-auto">
                   <div className="flex items-center gap-2 mb-4">
@@ -107,7 +105,9 @@ const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
 
                   <div className="border-t pt-4">
                     <a
-                      href="#"
+                      href={post.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-200"
                     >
                       <span className="font-medium">Read more</span>
@@ -168,6 +168,8 @@ const BlogSection: React.FC<BlogProps> = ({ posts = postsBlog }) => {
                   <div className="border-t pt-4">
                     <a
                       href={post.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-200"
                     >
                       <span className="font-medium">Read more</span>
