@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import Logo from "../assets/logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 
 export function Navbar() {
@@ -55,7 +54,7 @@ export function Navbar() {
           <img className="object-cover w-full h-full" src={Logo} alt="logo" />
         </div>
         <div className="flex justify-between items-center gap-4">
-          <NavLink
+          {/* <NavLink
             to="/admin"
             className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
           >
@@ -66,7 +65,7 @@ export function Navbar() {
             className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-gray-100 text-white font-bold "
           >
             User
-          </NavLink>
+          </NavLink> */}
 
           <Link
             to="research"
@@ -112,7 +111,7 @@ export function Navbar() {
             ref={navbarRef}
           >
             <div className="flex flex-col">
-              <NavLink
+              {/* <NavLink
                 to="/admin"
                 className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
               >
@@ -123,7 +122,7 @@ export function Navbar() {
                 className="relative py-2 px-4 text-white w-full cursor-pointer hover:font-bold"
               >
                 User
-              </NavLink>
+              </NavLink> */}
               <Link
                 to="research"
                 smooth={true}

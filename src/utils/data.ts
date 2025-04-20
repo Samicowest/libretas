@@ -14,7 +14,7 @@ import { BlogPost, Company, HeroProps } from "@/types/types";
 export const companiesData: Company[] = [
   {
     id: "1",
-    name: "Micro Ventures Initiative Systems development",
+    name: "Micro Ventures Initiative ",
     industry: "Technology",
     companyId: "283h9hf",
     description:
@@ -26,7 +26,7 @@ export const companiesData: Company[] = [
   },
   {
     id: "2",
-    name: "Libertas Estate Agriculture X Blockchain",
+    name: "Libertas Estate ",
     industry: "Real Estate",
     companyId: "143h9hf",
     description:
@@ -38,7 +38,7 @@ export const companiesData: Company[] = [
   },
   {
     id: "3",
-    name: "Tradex Decentralized Automation",
+    name: "Tradex",
     industry: "Trading",
     companyId: "133h9ff",
     description:
@@ -61,7 +61,7 @@ export const defaultPosts: BlogPost[] = [
     readTime: "5 min read",
     imageUrl: Blog1,
     category: ["Blockchain", "Research", "Innovation", "Tech", "Ngo"],
-    link: "https://medium.com/@libertasalpha_10290/introducing-micro-venture-initiative-mvi-tokenizing-sustainable-social-impact-72f9b67069bd",
+    link: "https://medium.com/@libertasalpha_10290/building-the-future-inside-libertas-alphas-vision-driven-ecosystem-ca0d5dbe3b6c",
   },
   {
     id: 2,
@@ -85,7 +85,7 @@ export const defaultPosts: BlogPost[] = [
     readTime: "8 min read",
     imageUrl: Blog3,
     category: ["Invest", "Tokenization", "Venture Capital", "Blockchain"],
-    link: "https://medium.com/@libertasalpha_10290/building-the-future-inside-libertas-alphas-vision-driven-ecosystem-ca0d5dbe3b6c",
+    link: "https://medium.com/@libertasalpha_10290/introducing-micro-venture-initiative-mvi-tokenizing-sustainable-social-impact-72f9b67069bd",
   },
 ];
 
